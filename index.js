@@ -8,11 +8,13 @@ window.onload = function() {
 	var randWordTransl = randWordObj.translation;
 	console.log(randWordTransl);
 	wordCont.innerHTML = randWordKor;
-
 	var currentWordKor = document.querySelector(".word-h1");
-
 	currentWordKor.onclick = function() {
-		this.innerHTML = randWordTransl;	
+		if(this.innerHTML === randWordKor) {
+			this.innerHTML = randWordTransl;	
+		} else {
+			this.innerHTML = randWordKor;
+		}
 	};
 };
 

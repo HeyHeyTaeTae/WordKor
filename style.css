@@ -31,3 +31,7 @@
 .word-h1 {
 	font-size: 5em;
 }
+
+.word-h1:hover {
+	cursor: pointer;
+}	
