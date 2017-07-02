@@ -1,0 +1,22 @@
+/*no default margin or padding*/
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.word-div {
+	margin-top: 15%;
+}
+
+.word-div h1,
+.word-h1 {
+	text-align: center;
+}
+
+.word-div h1 {
+	font-size: 4em;
+}
+
+.word-h1 {
+	font-size: 5em;
+}
