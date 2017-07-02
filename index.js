@@ -6,7 +6,6 @@ window.onload = function() {
 	var randWordObj = wordList[Math.floor(Math.random() * wordList.length)];
 	var randWordKor = randWordObj.korean;
 	var randWordTransl = randWordObj.translation;
-	console.log(randWordTransl);
 	wordCont.innerHTML = randWordKor;
 	var currentWordKor = document.querySelector(".word-h1");
 	currentWordKor.onclick = function() {
@@ -19,25 +18,36 @@ window.onload = function() {
 };
 
 var wordList = [{korean:"자기",
-				translation:"Darling"},
+				translation:"Darling",
+				romanization:"(Jya-gee)"},
 				{korean:"사랑",
-				translation:"Love"},
+				translation:"Love",
+				romanization:"(Sa-rahng)"},
 				{korean:"커피",
-				translation:"Coffee"},
+				translation:"Coffee",
+				romanization:"(Kuh-pee)"},
 				{korean:"고양이",
-				translation:"Cat"},
+				translation:"Cat",
+				romanization:"(Goh-yahng-ee)"},
 				{korean:"뽀뽀",
-				translation:"Kiss"},
+				translation:"Kiss",
+				romanization:"(Bboh-bboh)"},
 				{korean:"딸기",
-				translation:"Strawberry"},
+				translation:"Strawberry",
+				romanization:"(Thahl-gi)"},
 				{korean:"학교",
-				translation:"School"},
+				translation:"School",
+				romanization:"(Hahk-giyo)"},
 				{korean:"강아지",
-				translation:"Puppy"},
+				translation:"Puppy",
+				romanization:"(Gahng-ah-gee)"},
 				{korean:"친구",
-				translation:"Friend"},
+				translation:"Friend",
+				romanization:"(Ching-goo)"},
 				{korean:"사탕",
-				translation:"Candy"},
+				translation:"Candy",
+				romanization:"(Sah-tahng)"},
 				{korean:"설탕",
-				translation:"Sugar"}];
+				translation:"Sugar",
+				romanization:"(Suhl-tahng)"}];
 
