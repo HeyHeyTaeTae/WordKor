@@ -2,15 +2,26 @@
 * {
 	margin: 0;
 	padding: 0;
+	font-family: Roboto slab;
 }
 
+.date-div {
+	margin-top: 10%;
+}
 .word-div {
-	margin-top: 15%;
+	margin-top: 5%;
 }
 
+.date-div h1,
+#date,
 .word-div h1,
 .word-h1 {
 	text-align: center;
+}
+
+#date,
+.date-div h1 {
+	font-size: 3em;
 }
 
 .word-div h1 {
