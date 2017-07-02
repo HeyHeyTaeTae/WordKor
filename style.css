@@ -5,9 +5,7 @@
 	font-family: Roboto slab;
 }
 
-.date-div {
-	margin-top: 10%;
-}
+.date-div, 
 .word-div {
 	margin-top: 5%;
 }
@@ -15,7 +13,8 @@
 .date-div h1,
 #date,
 .word-div h1,
-.word-h1 {
+.word-h1,
+.word-romanization-h1 {
 	text-align: center;
 }
 
@@ -24,7 +23,8 @@
 	font-size: 3em;
 }
 
-.word-div h1 {
+.word-div h1,
+.word-romanization-h1 {
 	font-size: 4em;
 }
 

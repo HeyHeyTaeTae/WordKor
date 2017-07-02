@@ -3,10 +3,13 @@ window.onload = function() {
 	var dateCont = document.querySelector("#date");
 	dateCont.innerHTML = new Date().toDateString();
 	var wordCont = document.querySelector(".word-h1");
+	var romanCont = document.querySelector(".word-romanization-h1");
 	var randWordObj = wordList[Math.floor(Math.random() * wordList.length)];
 	var randWordKor = randWordObj.korean;
 	var randWordTransl = randWordObj.translation;
+	var randWordRoman = randWordObj.romanization;
 	wordCont.innerHTML = randWordKor;
+	romanCont.innerHTML = randWordRoman;
 	var currentWordKor = document.querySelector(".word-h1");
 	currentWordKor.onclick = function() {
 		if(this.innerHTML === randWordKor) {
@@ -19,7 +22,7 @@ window.onload = function() {
 
 var wordList = [{korean:"자기",
 				translation:"Darling",
-				romanization:"(Jya-gee)"},
+				romanization:"(Jya-gi)"},
 				{korean:"사랑",
 				translation:"Love",
 				romanization:"(Sa-rahng)"},
