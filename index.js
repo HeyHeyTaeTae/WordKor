@@ -8,9 +8,13 @@ window.onload = function() {
 	var randWordTransl = randWordObj.translation;
 	console.log(randWordTransl);
 	wordCont.innerHTML = randWordKor;
-};
 
-var currentWordKor = document.querySelector(".word-h1");
+	var currentWordKor = document.querySelector(".word-h1");
+
+	currentWordKor.onclick = function() {
+		this.innerHTML = randWordTransl;	
+	};
+};
 
 var wordList = [{korean:"자기",
 				translation:"Darling"},
