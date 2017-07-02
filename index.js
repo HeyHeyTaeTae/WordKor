@@ -3,11 +3,14 @@ window.onload = function() {
 	var dateCont = document.querySelector("#date");
 	dateCont.innerHTML = new Date().toDateString();
 	var wordCont = document.querySelector(".word-h1");
-	var randWord = wordList[Math.floor(Math.random() * wordList.length)];
-	wordCont.innerHTML = randWord;
+	var randWordObj = wordList[Math.floor(Math.random() * wordList.length)];
+	var randWordKor = randWordObj.korean;
+	var randWordTransl = randWordObj.translation;
+	console.log(randWordTransl);
+	wordCont.innerHTML = randWordKor;
 };
 
-
+var currentWordKor = document.querySelector(".word-h1");
 
 var wordList = [{korean:"자기",
 				translation:"Darling"},
@@ -30,5 +33,5 @@ var wordList = [{korean:"자기",
 				{korean:"사탕",
 				translation:"Candy"},
 				{korean:"설탕",
-				translation:"Sugar"];
+				translation:"Sugar"}];
 
