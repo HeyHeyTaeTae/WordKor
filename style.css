@@ -13,8 +13,7 @@
 #date,
 .word-h1,
 .date-div h1,
-.word-div h1,
-.word-romanization-h1 {
+.word-div h1 {
 	text-align: center;
 }
 
@@ -23,8 +22,7 @@
 	font-size: 3em;
 }
 
-.word-div h1,
-.word-romanization-h1 {
+.word-div h1 {
 	font-size: 4em;
 }
 
@@ -32,7 +30,46 @@
 	font-size: 5em;
 }
 
-.word-h1:hover,
-.word-romanization-h1 {
+.word-helper-button-div {
+	width: 30%;
+    margin: 0 auto;
+    margin-top: 2.5%;
+}
+
+.english-translation-button,
+.romanization-button {
+	height: 40px;
+    width: 125px;
+    border-radius: 5px;
+    background-color: #DADADA;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+.english-translation-button:hover,
+.romanization-button:hover {
 	cursor: pointer;
-}	
+}
+
+.romanization-button {
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

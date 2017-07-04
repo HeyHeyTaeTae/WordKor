@@ -1,14 +1,14 @@
 window.onload = function() {
 	console.log("Santity check!");
-	
+
 	// display date
 	var dateCont = document.querySelector("#date");
 	dateCont.innerHTML = new Date().toDateString();
 
 	// grab containers for word info
 	var wordCont = document.querySelector(".word-h1");
-	var currentWordKor = document.querySelector(".word-h1");
-	var romanCont = document.querySelector(".word-romanization-h1");
+	var englishTranslBtn = document.querySelector(".english-translation-button");
+	var romanBtn = document.querySelector(".romanization-button");
 
 	// grab random word from array
 	var randWordObj = wordList[Math.floor(Math.random() * wordList.length)];
@@ -18,20 +18,22 @@ window.onload = function() {
 	wordCont.innerHTML = randWordKor;
 	
 	// click toggle for romanization
-	romanCont.onclick = function() {
-		if(this.innerHTML === randWordRoman) {
-			this.innerHTML = "Click for romanization";
+	romanBtn.onclick = function() {
+		if(wordCont.innerHTML === randWordKor + " " + randWordRoman) {
+			wordCont.innerHTML = randWordKor;
 		} else {
-			this.innerHTML = randWordRoman;
+			wordCont.innerHTML = randWordKor + " " + randWordRoman;
 		}
 	}
 
 	// click toggle for Korean -> English
-	currentWordKor.onclick = function() {
-		if(this.innerHTML === randWordKor) {
-			this.innerHTML = randWordTransl;	
+	englishTranslBtn.onclick = function() {
+		if(wordCont.innerHTML === randWordKor) {
+			wordCont.innerHTML = randWordTransl;	
+		} else if(wordCont.innerHTML === randWordKor + " " + randWordRoman) {
+			wordCont.innerHTML = randWordTransl;
 		} else {
-			this.innerHTML = randWordKor;
+			wordCont.innerHTML = randWordKor;
 		}
 	};
 };
