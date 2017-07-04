@@ -10,10 +10,10 @@
 	margin-top: 5%;
 }
 
-.date-div h1,
 #date,
-.word-div h1,
 .word-h1,
+.date-div h1,
+.word-div h1,
 .word-romanization-h1 {
 	text-align: center;
 }
@@ -32,6 +32,7 @@
 	font-size: 5em;
 }
 
-.word-h1:hover {
+.word-h1:hover,
+.word-romanization-h1 {
 	cursor: pointer;
 }	

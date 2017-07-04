@@ -1,16 +1,32 @@
 window.onload = function() {
 	console.log("Santity check!");
+	
+	// display date
 	var dateCont = document.querySelector("#date");
 	dateCont.innerHTML = new Date().toDateString();
+
+	// grab containers for word info
 	var wordCont = document.querySelector(".word-h1");
+	var currentWordKor = document.querySelector(".word-h1");
 	var romanCont = document.querySelector(".word-romanization-h1");
+
+	// grab random word from array
 	var randWordObj = wordList[Math.floor(Math.random() * wordList.length)];
 	var randWordKor = randWordObj.korean;
 	var randWordTransl = randWordObj.translation;
 	var randWordRoman = randWordObj.romanization;
 	wordCont.innerHTML = randWordKor;
-	romanCont.innerHTML = randWordRoman;
-	var currentWordKor = document.querySelector(".word-h1");
+	
+	// click toggle for romanization
+	romanCont.onclick = function() {
+		if(this.innerHTML === randWordRoman) {
+			this.innerHTML = "Click for romanization";
+		} else {
+			this.innerHTML = randWordRoman;
+		}
+	}
+
+	// click toggle for Korean -> English
 	currentWordKor.onclick = function() {
 		if(this.innerHTML === randWordKor) {
 			this.innerHTML = randWordTransl;	
