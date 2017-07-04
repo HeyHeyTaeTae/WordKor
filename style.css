@@ -5,6 +5,10 @@
 	font-family: Roboto slab;
 }
 
+button:focus {
+	outline: 0;
+}
+
 .date-div, 
 .word-div {
 	margin-top: 5%;

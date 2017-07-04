@@ -11,7 +11,7 @@ window.onload = function() {
 	var romanBtn = document.querySelector(".romanization-button");
 
 	// grab random word from array
-	var randWordObj = wordList[Math.floor(Math.random() * wordList.length)];
+	var randWordObj = vocabList[Math.floor(Math.random() * vocabList.length)];
 	var randWordKor = randWordObj.korean;
 	var randWordTransl = randWordObj.translation;
 	var randWordRoman = randWordObj.romanization;
@@ -38,7 +38,7 @@ window.onload = function() {
 	};
 };
 
-var wordList = [
+var vocabList = [
 				{korean:"자기",
 				translation:"Darling",
 				romanization:"(Jya-gi)"},
