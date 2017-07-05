@@ -9,15 +9,40 @@ button:focus {
 	outline: 0;
 }
 
+/*-- sets width for grid container --*/
+.grid-container {
+	width: 100%;
+}
+
+/*-- our cleafix hack -- */ 
+.row:before, 
+.row:after {
+	content:"";
+	display: table;
+	clear:both;    
+}
+
+/*-- styling for all column classes --*/
+[class*='col-'] {
+	float: left;
+	min-height: 1px;
+}
+
+.col-third {
+	width: 33.33%;
+}
+
 .date-div, 
-.word-div {
-	margin-top: 5%;
+.word-div,
+.romanization-div {
+	margin-top: 2.5%;
 }
 
 #date,
 .word-h1,
 .date-div h1,
-.word-div h1 {
+.word-div h1,
+.romanization-h1 {
 	text-align: center;
 }
 
@@ -26,7 +51,8 @@ button:focus {
 	font-size: 3em;
 }
 
-.word-div h1 {
+.word-div h1,
+.romanization-h1 {
 	font-size: 4em;
 }
 
@@ -35,13 +61,14 @@ button:focus {
 }
 
 .word-helper-button-div {
-	width: 30%;
+	width: 35%;
     margin: 0 auto;
     margin-top: 2.5%;
 }
 
 .english-translation-button,
-.romanization-button {
+.romanization-button,
+.category-button {
 	height: 40px;
     width: 125px;
     border-radius: 5px;
@@ -51,12 +78,9 @@ button:focus {
 }
 
 .english-translation-button:hover,
-.romanization-button:hover {
+.romanization-button:hover,
+.category-button {
 	cursor: pointer;
-}
-
-.romanization-button {
-	float: right;
 }
 
 

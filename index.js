@@ -7,6 +7,7 @@ window.onload = function() {
 
 	// grab containers for word info
 	var wordCont = document.querySelector(".word-h1");
+	var romanCont = document.querySelector(".romanization-h1");
 	var englishTranslBtn = document.querySelector(".english-translation-button");
 	var romanBtn = document.querySelector(".romanization-button");
 
@@ -19,10 +20,10 @@ window.onload = function() {
 	
 	// click toggle for romanization
 	romanBtn.onclick = function() {
-		if(wordCont.innerHTML === randWordKor + " " + randWordRoman) {
-			wordCont.innerHTML = randWordKor;
+		if(romanCont.innerHTML === randWordRoman) {
+			romanCont.innerHTML = "";
 		} else {
-			wordCont.innerHTML = randWordKor + " " + randWordRoman;
+			romanCont.innerHTML = randWordRoman;
 		}
 	}
 
@@ -30,8 +31,6 @@ window.onload = function() {
 	englishTranslBtn.onclick = function() {
 		if(wordCont.innerHTML === randWordKor) {
 			wordCont.innerHTML = randWordTransl;	
-		} else if(wordCont.innerHTML === randWordKor + " " + randWordRoman) {
-			wordCont.innerHTML = randWordTransl;
 		} else {
 			wordCont.innerHTML = randWordKor;
 		}
