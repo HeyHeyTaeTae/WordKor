@@ -98,3 +98,63 @@ var vocabList = [
 				romanization:"(Seohl-tahng)"}
 				];
 
+var foodList = [
+				{korean:"사과",
+				translation:"Apple",
+				romanization:"(Sah-guah)"},
+
+				{korean:"소고기",
+				translation:"",
+				romanization:"()"},
+
+				{korean:"양파",
+				translation:"Onion",
+				romanization:"(Yahng-pah)"},
+
+				{korean:"마늘",
+				translation:"Garlic",
+				romanization:"(Mah-neul)"},
+
+				{korean:"파",
+				translation:"Green Onion",
+				romanization:"(Pah)"},
+
+				{korean:"두부",
+				translation:"Tofu",
+				romanization:"(Doo-boo)"},
+
+				{korean:"우유",
+				translation:"Milk",
+				romanization:"(Ooo-yoo)"},
+
+				{korean:"만두",
+				translation:"Dumplings",
+				romanization:"(Mahn-doo)"},
+
+				{korean:"김치",
+				translation:"Kimchi",
+				romanization:"(Gim-chee)"},
+
+				{korean:"밥",
+				translation:"Rice",
+				romanization:"(Bahp)"},
+			    ]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
