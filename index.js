@@ -10,6 +10,8 @@ window.onload = function() {
 	var romanCont = document.querySelector(".romanization-h1");
 	var englishTranslBtn = document.querySelector(".english-translation-button");
 	var romanBtn = document.querySelector(".romanization-button");
+	var categoryBtn = document.querySelector(".category-button");
+	var categoryDrop = document.querySelector(".category-dropmenu");
 
 	// grab random word from array
 	var randWordObj = vocabList[Math.floor(Math.random() * vocabList.length)];
@@ -25,7 +27,7 @@ window.onload = function() {
 		} else {
 			romanCont.innerHTML = randWordRoman;
 		}
-	}
+	};
 
 	// click toggle for Korean -> English
 	englishTranslBtn.onclick = function() {
@@ -35,6 +37,19 @@ window.onload = function() {
 			wordCont.innerHTML = randWordKor;
 		}
 	};
+
+	// click hide/show for category drop
+	categoryBtn.onclick = function() {
+			console.log("Working!");
+		if(categoryDrop.classList.contains("hidden-status")) {
+			categoryDrop.classList.remove("hidden-status");
+			categoryDrop.classList.add("show-status");
+		} else {
+			categoryDrop.classList.remove("show-status");
+			categoryDrop.classList.add("hidden-status");
+		}
+	};
+
 };
 
 var vocabList = [

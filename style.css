@@ -111,9 +111,13 @@ button:focus {
 	border-bottom: none;
 }
 
-/*.hidden-status {
+.hidden-status {
 	display: none;
-}*/
+}
+
+.show-status {
+	display: revert;
+}
 
 
 
