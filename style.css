@@ -34,9 +34,8 @@ button:focus {
 }
 
 .date-div, 
-.word-div,
-.romanization-div {
-	margin-top: 2.5%;
+.word-div {
+	margin-top: 2%;
 }
 
 #date,
@@ -48,13 +47,23 @@ button:focus {
 }
 
 #date,
-.date-div h1 {
+.date-div h1,
+.romanization-h1 {
 	font-size: 3em;
 }
 
-.word-div h1,
-.romanization-h1 {
+.word-div h1 {
 	font-size: 4em;
+}
+
+.word-div {
+	height: 155px;
+	line-height: 75px;
+}
+
+.romanization-div {
+	height: 100px;
+	line-height: 100px;
 }
 
 .word-h1 {
@@ -81,7 +90,8 @@ button:focus {
 
 .english-translation-button:hover,
 .romanization-button:hover,
-.category-button {
+.category-button,
+.category-dropmenu li:hover {
 	cursor: pointer;
 }
 
@@ -93,13 +103,17 @@ button:focus {
 	border-bottom: 1px solid
 }
 
+.category-dropmenu li:hover {
+	background-color: #CEE5F6;
+}
+
 #no-border-bottom {
 	border-bottom: none;
 }
 
-.hidden-status {
-	visibility: hidden;
-}
+/*.hidden-status {
+	display: none;
+}*/
 
 
 
