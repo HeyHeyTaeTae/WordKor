@@ -97,6 +97,8 @@ button:focus {
 
 .category-dropmenu {
 	border: 1px solid;
+	height: 120px;
+    overflow: scroll;
 }
 
 .category-dropmenu li {
