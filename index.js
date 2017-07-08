@@ -5,11 +5,9 @@ window.onload = function() {
 	var dateCont = document.querySelector("#date");
 	dateCont.innerHTML = new Date().toDateString();
 
-	// grab containers for word info
-	
 	var categoryBtn = document.querySelector(".category-button");
 	var categoryDrop = document.querySelector(".category-dropmenu");
-	var foodCategory = document.querySelector(".food-category");
+	var allDropmenuLi = document.getElementsByClassName(".drop-li");
 
 	// click hide/show for category drop
 	categoryBtn.onclick = function() {
@@ -22,19 +20,20 @@ window.onload = function() {
 		}
 	};
 
-	// click event propagation for category ul
-	// categoryDrop.onclick = function() {
-	// 	var category = this.innerHTML;
-	// 	for(word=0; word<vocabList.length; word++) {
-	// 		var categoryVocabList = [];
-	// 		if(word.category === category) {
-	// 			categoryVocabList.push(word);
-	// 		} else {
-	// 			word++
-	// 		}
-	// 	}
+	// click event delegation for category li
+	var setCategoryClick = function () {
+		document.getElementById("category-list").addEventListener("click", function(e) {
+			console.log(e);
+			if(e.target && e.target.nodeName === "LI") {
+				var category = e.target.textContent;
 
-	// }
+				var categoryVocabList = vocabList.filter(function(word) {
+					return word.category === category;
+				});
+				setWord(categoryVocabList, setBtnEvent);
+			}
+		});
+	}
 
 	// sets word in word container
 	var setWord = function(array, callback) {
@@ -49,7 +48,6 @@ window.onload = function() {
 	var setBtnEvent = function(word, container) {
 		var englishTranslBtn = document.querySelector(".english-translation-button");
 		var romanBtn = document.querySelector(".romanization-button");
-		console.log(word);
 		// click toggle for romanization
 		var romanCont = document.querySelector(".romanization-h1");
 		romanBtn.onclick = function() {
@@ -71,6 +69,7 @@ window.onload = function() {
 		};
 	}
 	setWord(vocabList, setBtnEvent);
+	setCategoryClick();
 };
 
 var vocabList = [
