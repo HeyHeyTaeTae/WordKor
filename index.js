@@ -5,6 +5,7 @@ window.onload = function() {
 	var dateCont = document.querySelector("#date");
 	dateCont.innerHTML = new Date().toDateString();
 
+	// dropdown menu variables
 	var categoryBtn = document.querySelector(".category-button");
 	var categoryDrop = document.querySelector(".category-dropmenu");
 	var allDropmenuLi = document.getElementsByClassName(".drop-li");
@@ -23,7 +24,6 @@ window.onload = function() {
 	// click event delegation for category li
 	var setCategoryClick = function () {
 		document.getElementById("category-list").addEventListener("click", function(e) {
-			console.log(e);
 			if(e.target && e.target.nodeName === "LI") {
 				var category = e.target.textContent;
 
@@ -177,7 +177,7 @@ var vocabList = [
 				translation:"Rice",
 				romanization:"(Bahp)",
 				category:"Food"}
-			    ]
+			  ]
 
 
 
